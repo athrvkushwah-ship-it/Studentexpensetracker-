@@ -9,7 +9,18 @@ print('Amount', Add_expense,  'Category:', Add_catagrory, 'Reason:', Reasone, se
 Total_expense = Add_expense
 while True:
     New_catageory = input('New catageory:')
-    New_Reasone = input('New_Resone:')
-    New_expense = int(input('Enter the new expense :'))
-    Total_expense += New_expense
-    print("Total expense :",Total_expense)
+    if not New_catageory:
+        print('Pls Enter the catagory')
+        continue
+    while True:
+     New_Reasone = input('New_Resone:')
+     if not New_Reasone:
+        print('Pls enter Reasone')
+        continue
+     while True:
+      New_expense = int(input('Enter the new expense :'))
+      if not New_expense:
+         print("pls entre the expense" )
+         continue
+      Total_expense += New_expense
+      print("Total expense :",Total_expense)
